@@ -23,6 +23,11 @@ func (g *GameEngine) RunningGameEngine(m *Menu) {
 	m.InitMenu()
 	rl.PlayMusicStream(m.sound)
 	for !rl.WindowShouldClose() {
-		m.DisplayMenu()
+		switch m.menu {
+		case 0:
+			m.DisplayIntro()
+		case 1:
+			m.DisplayMenu()
+		}
 	}
 }

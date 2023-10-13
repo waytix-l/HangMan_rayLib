@@ -2,8 +2,6 @@ package gameEngine
 
 import rl "github.com/gen2brain/raylib-go/raylib"
 
-
-
 func (m *Menu) DisplayMenu() {
 
 	rl.UpdateMusicStream(m.sound)
@@ -11,6 +9,7 @@ func (m *Menu) DisplayMenu() {
 	m.timer_title++
 	m.timer_button++
 	m.timer_background++
+	m.timer_thunder++
 
 	rl.BeginDrawing()
 	rl.ClearBackground(rl.Black)
@@ -28,16 +27,24 @@ func (m *Menu) DisplayMenu() {
 		m.color_background,
 	)
 
+	if m.timer_background > 100 && m.color_sep.A < 255 {
+		m.color_sep.A += 5
+	}
+	rl.DrawRectangle(540, 0, 15, 1080, m.color_sep)
+	rl.DrawRectangle(1350, 0, 15, 1080, m.color_sep)
+	rl.DrawRectangle(540, 0, 820, 15, m.color_sep)
+	rl.DrawRectangle(540, 1065, 820, 15, m.color_sep)
+
 	if m.timer_title > 200 && m.color_title.A < 255 {
 		m.color_title.A += 5
 	}
 
 	rl.DrawTextEx(
-		m.FontHorror, 
+		m.FontHorror,
 		"HANGMAN",
-		rl.NewVector2(825, 100), 
-		60, 
-		20, 
+		rl.NewVector2(830, 140),
+		60,
+		20,
 		m.color_title,
 	)
 
@@ -48,36 +55,35 @@ func (m *Menu) DisplayMenu() {
 
 	rl.DrawTextureEx(
 		m.Button,
-		rl.NewVector2(760, 300),
+		rl.NewVector2(680, 875),
 		0,
-		1.5,
+		2,
 		m.color_button,
 	)
 
 	rl.DrawTextEx(
-		m.FontHorror, 
+		m.FontHorror,
 		"PLAY",
-		rl.NewVector2(880, 340), 
-		70, 
-		20, 
+		rl.NewVector2(735, 890),
+		70,
+		20,
 		m.color_text_button,
 	)
 
-
 	rl.DrawTextureEx(
 		m.Button,
-		rl.NewVector2(760, 500),
+		rl.NewVector2(980, 875),
 		0,
-		1.5,
+		2,
 		m.color_button,
 	)
 
 	rl.DrawTextEx(
-		m.FontHorror, 
+		m.FontHorror,
 		"QUIT",
-		rl.NewVector2(880, 540), 
-		70, 
-		20, 
+		rl.NewVector2(1035, 890),
+		70,
+		20,
 		m.color_text_button,
 	)
 
