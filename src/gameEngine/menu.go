@@ -5,7 +5,7 @@ import (
 )
 
 type Menu struct {
-	sound rl.Sound
+	sound rl.Music
 
 	Title     rl.Texture2D
 

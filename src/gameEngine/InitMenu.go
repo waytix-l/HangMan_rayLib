@@ -3,7 +3,7 @@ package gameEngine
 import rl "github.com/gen2brain/raylib-go/raylib"
 
 func (m * Menu) InitMenu() {
-	m.sound = rl.LoadSound("assets/musique_h.mp3")
+	m.sound = rl.LoadMusicStream("assets/musique_h.mp3")
 
 	m.Title = rl.LoadTexture("assets/title_hangman.png")
 
