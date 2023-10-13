@@ -6,7 +6,7 @@ import rl "github.com/gen2brain/raylib-go/raylib"
 
 func (m *Menu) DisplayMenu() {
 
-	rl.PlayMusicStream(m.sound)
+	rl.UpdateMusicStream(m.sound)
 
 	m.timer_title++
 	m.timer_button++

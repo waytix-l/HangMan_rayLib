@@ -21,6 +21,7 @@ func (g *GameEngine) InitGameEngine(x int32, y int32, title string) {
 
 func (g *GameEngine) RunningGameEngine(m *Menu) {
 	m.InitMenu()
+	rl.PlayMusicStream(m.sound)
 	for !rl.WindowShouldClose() {
 		m.DisplayMenu()
 	}
