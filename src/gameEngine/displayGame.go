@@ -93,5 +93,13 @@ func (m *Menu) DisplayGame(g *Game) {
 
 	rl.DrawTextEx(m.test_font, g.underscore_word, rl.NewVector2(float32(880 - (7*len(g.underscore_word))), 865), 50, 20, rl.White)
 
+	g.letter_used = ""
+	for i := 0; i < len(g.guesses); i++ {
+		g.letter_used += g.guesses[i]
+		g.letter_used += " "
+	}
+
+	rl.DrawTextEx(m.test_font, g.letter_used, rl.NewVector2(780, 920), 30, 5, rl.White)
+
 	rl.EndDrawing()
 }
