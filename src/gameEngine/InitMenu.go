@@ -49,6 +49,21 @@ func (m *Menu) InitMenu() {
 	m.rect_text = rl.NewRectangle(650, 800, 600, 170)
 	m.color_rect = rl.ColorAlpha(rl.DarkGray, 0.7)
 
+	m.tree1 = rl.LoadTexture("assets/Tree/arbre1.png")
+	m.tree2 = rl.LoadTexture("assets/Tree/arbre2.png")
+	m.tree3 = rl.LoadTexture("assets/Tree/arbre3.png")
+	m.tree4 = rl.LoadTexture("assets/Tree/arbre4.png")
+	m.tree5 = rl.LoadTexture("assets/Tree/arbre5.png")
+	m.tree6 = rl.LoadTexture("assets/Tree/arbre6.png")
+	m.tree7 = rl.LoadTexture("assets/Tree/arbre7.png")
+	m.tree8 = rl.LoadTexture("assets/Tree/arbre8.png")
+	m.tree9 = rl.LoadTexture("assets/Tree/arbre9.png")
+	m.tree10 = rl.LoadTexture("assets/Tree/arbre10.png")
+
 	m.timer_dead = 0
 	m.background_color_dead = rl.ColorAlpha(rl.Black, 0)
+	m.color_uaredead = rl.ColorAlpha(rl.Red, 0)
+	m.color_quit = rl.ColorAlpha(rl.Red, 0)
+
+	m.timer_win = 0
 }

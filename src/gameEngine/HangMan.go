@@ -31,7 +31,6 @@ func (g *Game) verif(m *Menu) {
 	if g.guess != "" {
 		for i := 0; i < len(g.guesses); i++ {
 			if g.guess == g.guesses[i] {
-				fmt.Println("retry")
 				g.guess = ""
 
 				g.verif(m)
@@ -41,9 +40,7 @@ func (g *Game) verif(m *Menu) {
 		g.guesses = append(g.guesses, g.guess)
 		g.perdu = true
 		for j := 0; j < len(g.Tableau_rune); j++ {
-			fmt.Println(string(g.Tableau_rune[j]-32))
 			if g.guess == string(g.Tableau_rune[j]-32) {
-				fmt.Println("vrai")
 				g.Mot_secret[j] = g.guess
 				g.perdu = false
 			}

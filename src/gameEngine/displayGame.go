@@ -33,50 +33,63 @@ func (m *Menu) DisplayGame(g *Game) {
 
 	rl.DrawTextEx(m.test_font, g.underscore_word, rl.NewVector2(float32(880 - (7*len(g.underscore_word))), 865), 50, 20, rl.White)
 
-	rl.EndDrawing()
+	
 
 	switch g.Stage {
 
 	case 0:
 		g.Input()
 		g.verif(m)
+		rl.DrawTextureEx(m.tree1, rl.NewVector2(500, -70), 0, 1.5, rl.White)
 
 	case 1:
 		g.Input()
 		g.verif(m)
+		rl.DrawTextureEx(m.tree2, rl.NewVector2(500, -70), 0, 1.5, rl.White)
 
 	case 2:
 		g.Input()
 		g.verif(m)
+		rl.DrawTextureEx(m.tree3, rl.NewVector2(500, -70), 0, 1.5, rl.White)
 
 	case 3:
 		g.Input()
 		g.verif(m)
+		rl.DrawTextureEx(m.tree4, rl.NewVector2(500, -70), 0, 1.5, rl.White)
+
 	case 4:
 		g.Input()
 		g.verif(m)
+		rl.DrawTextureEx(m.tree5, rl.NewVector2(500, -70), 0, 1.5, rl.White)
+
 	case 5:
 		g.Input()
 		g.verif(m)
+		rl.DrawTextureEx(m.tree6, rl.NewVector2(500, -70), 0, 1.5, rl.White)
+
 	case 6:
 		g.Input()
 		g.verif(m)
+		rl.DrawTextureEx(m.tree7, rl.NewVector2(500, -70), 0, 1.5, rl.White)
+
 	case 7:
 		g.Input()
 		g.verif(m)
+		rl.DrawTextureEx(m.tree8, rl.NewVector2(500, -70), 0, 1.5, rl.White)
+
 	case 8:
 		g.Input()
 		g.verif(m)
+		rl.DrawTextureEx(m.tree9, rl.NewVector2(500, -70), 0, 1.5, rl.White)
+
 	case 9:
 		g.Input()
 		g.verif(m)
-	case 10:
-		g.Input()
-		g.verif(m)
-	case 11:
-		g.Input()
-		g.verif(m)
-	case 12: // Dead Screen
-		m.DisplayLose()
+		rl.DrawTextureEx(m.tree10, rl.NewVector2(500, -70), 0, 1.5, rl.White)
+
+	case 10: // Dead Screen
+		m.menu = 4
 	}
+
+	rl.EndDrawing()
 }

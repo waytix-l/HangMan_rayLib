@@ -28,8 +28,6 @@ func (m *Menu) DisplayMenu() {
 		m.color_background,
 	)
 
-	
-
 
 	if m.timer_background > 100 && m.color_sep.A < 255 {
 		m.color_sep.A += 5
@@ -46,7 +44,6 @@ func (m *Menu) DisplayMenu() {
 	}
 
 	
-
 	rl.DrawTextEx(
 		m.FontHorror,
 		"HANGMAN",
@@ -125,12 +122,13 @@ func (m *Menu) DisplayMenu() {
 			m.color_title.A -= 5
 		}
 		if m.timer_close_menu > 130 {
+			m.close_menu = false
+			m.timer_close_menu = 0
 			m.menu = 2
 		}
 	}
 
 	
-
 	rl.DrawTextEx(
 		m.FontHorror,
 		"PLAY",
@@ -148,7 +146,6 @@ func (m *Menu) DisplayMenu() {
 		20,
 		m.color_text_button,
 	)
-
 
 	rl.EndDrawing()
 }
