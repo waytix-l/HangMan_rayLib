@@ -37,6 +37,10 @@ func (ge *GameEngine) RunningGameEngine(m *Menu) {
 			m.DisplayMenu()
 		case 2:
 			m.DisplayGame(&g)
+		case 3:
+			m.DisplayWin()
+		case 4:
+			m.DisplayLose()
 		}
 	}
 }

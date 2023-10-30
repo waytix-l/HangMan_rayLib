@@ -26,7 +26,7 @@ func (g *Game) RandomWord() {
 	}
 }
 
-func (g *Game) verif() {
+func (g *Game) verif(m *Menu) {
 
 	if g.guess != "" {
 		for i := 0; i < len(g.guesses); i++ {
@@ -34,7 +34,7 @@ func (g *Game) verif() {
 				fmt.Println("retry")
 				g.guess = ""
 
-				g.verif()
+				g.verif(m)
 			}
 		}
 
@@ -54,4 +54,16 @@ func (g *Game) verif() {
 			g.guess = ""
 		}
 	}
+
+
+	g.win = true
+	for _, letter := range g.Mot_secret {
+		if letter == "_" {
+			g.win = false
+		}
+	}
+	if g.win {
+		m.menu = 3
+	}
 }
+

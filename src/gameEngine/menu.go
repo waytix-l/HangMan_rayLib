@@ -50,4 +50,8 @@ type Menu struct {
 	color_rect rl.Color
 	tiemr_retry_text int
 	color_retry_text rl.Color
+
+
+	timer_dead int
+	background_color_dead rl.Color
 }

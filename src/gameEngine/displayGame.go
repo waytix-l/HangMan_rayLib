@@ -1,8 +1,6 @@
 package gameEngine
 
 import (
-	"fmt"
-
 	rl "github.com/gen2brain/raylib-go/raylib"
 )
 
@@ -41,45 +39,44 @@ func (m *Menu) DisplayGame(g *Game) {
 
 	case 0:
 		g.Input()
-		g.verif()
-		fmt.Println("aaaaa")
+		g.verif(m)
 
 	case 1:
 		g.Input()
-		g.verif()
-		fmt.Println("bbbbb")
+		g.verif(m)
 
 	case 2:
 		g.Input()
-		g.verif()
+		g.verif(m)
 
 	case 3:
 		g.Input()
-		g.verif()
+		g.verif(m)
 	case 4:
 		g.Input()
-		g.verif()
+		g.verif(m)
 	case 5:
 		g.Input()
-		g.verif()
+		g.verif(m)
 	case 6:
 		g.Input()
-		g.verif()
+		g.verif(m)
 	case 7:
 		g.Input()
-		g.verif()
+		g.verif(m)
 	case 8:
 		g.Input()
-		g.verif()
+		g.verif(m)
 	case 9:
 		g.Input()
-		g.verif()
+		g.verif(m)
 	case 10:
 		g.Input()
-		g.verif()
+		g.verif(m)
 	case 11:
 		g.Input()
-		g.verif()
+		g.verif(m)
+	case 12: // Dead Screen
+		m.DisplayLose()
 	}
-
 }

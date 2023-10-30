@@ -48,4 +48,7 @@ func (m *Menu) InitMenu() {
 	m.test_font = rl.LoadFont("assets/Rough Battle.ttf")
 	m.rect_text = rl.NewRectangle(650, 800, 600, 170)
 	m.color_rect = rl.ColorAlpha(rl.DarkGray, 0.7)
+
+	m.timer_dead = 0
+	m.background_color_dead = rl.ColorAlpha(rl.Black, 0)
 }
