@@ -26,12 +26,7 @@ func (m *Menu) DisplayGame(g *Game) {
 	rl.DrawRectangleRec(m.rect_text, m.color_rect)
 	rl.DrawTextEx(m.FontHorror, "Test a letter", rl.NewVector2(860, 820), 30, 10, rl.White)
 
-	g.underscore_word = ""
-	for i := 0; i < len(g.Mot_secret); i++ {
-		g.underscore_word += g.Mot_secret[i]
-	}
-
-	rl.DrawTextEx(m.test_font, g.underscore_word, rl.NewVector2(float32(880 - (7*len(g.underscore_word))), 865), 50, 20, rl.White)
+	
 
 	
 
@@ -90,6 +85,13 @@ func (m *Menu) DisplayGame(g *Game) {
 	case 10: // Dead Screen
 		m.menu = 4
 	}
+
+	g.underscore_word = ""
+	for i := 0; i < len(g.Mot_secret); i++ {
+		g.underscore_word += g.Mot_secret[i]
+	}
+
+	rl.DrawTextEx(m.test_font, g.underscore_word, rl.NewVector2(float32(880 - (7*len(g.underscore_word))), 865), 50, 20, rl.White)
 
 	rl.EndDrawing()
 }
