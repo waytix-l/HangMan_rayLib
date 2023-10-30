@@ -33,14 +33,19 @@ func (m *Menu) InitMenu() {
 	m.timer_title = 0
 
 	m.Button = rl.LoadTexture("assets/bouton_test.png")
+	m.ButtonHover = rl.LoadTexture("assets/buttonhover.png")
 	m.color_button = rl.ColorAlpha(rl.White, 0)
 	m.timer_button = 0
 
 	m.color_text_button = rl.ColorAlpha(rl.White, 0)
 
-	m.thunder = rl.LoadTexture("assets/eclair.png")
-	m.Sr_thunder = rl.NewRectangle(0, 0, 800, 600)
-	m.Dr_thunder = rl.NewRectangle(555, 0, 800, 1000)
-	m.Vector_thunder = rl.NewVector2(0, 0)
-	m.timer_thunder = 0
+	m.close_menu = false
+	m.timer_close_menu = 0
+
+	m.color_retry_text = rl.ColorAlpha(rl.White, 255)
+	m.tiemr_retry_text = 0
+
+	m.test_font = rl.LoadFont("assets/Rough Battle.ttf")
+	m.rect_text = rl.NewRectangle(650, 800, 600, 170)
+	m.color_rect = rl.ColorAlpha(rl.DarkGray, 0.7)
 }

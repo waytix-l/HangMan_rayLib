@@ -24,6 +24,11 @@ func (m *Menu) DisplayIntro() {
 		m.menu = 1
 	}
 
+	if rl.IsMouseButtonPressed(0) {
+		m.color_title.A = 0
+		m.menu = 1
+	}
+
 
 	rl.EndDrawing()
 

@@ -35,14 +35,19 @@ type Menu struct {
 	timer_title int
 
 	Button rl.Texture2D
+	ButtonHover rl.Texture2D
+
 	color_button rl.Color
 	timer_button int
 
 	color_text_button rl.Color
 
-	thunder rl.Texture2D
-	Sr_thunder rl.Rectangle
-	Dr_thunder rl.Rectangle
-	Vector_thunder rl.Vector2
-	timer_thunder int
+	close_menu bool
+	timer_close_menu int
+
+	test_font rl.Font
+	rect_text rl.Rectangle
+	color_rect rl.Color
+	tiemr_retry_text int
+	color_retry_text rl.Color
 }
