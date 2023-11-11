@@ -29,8 +29,6 @@ func (m *Menu) DisplayIntro() {
 		m.menu = 1
 	}
 
-
 	rl.EndDrawing()
-
 
 }
