@@ -9,7 +9,7 @@ func (m *Menu) DisplayIntro() {
 	rl.ClearBackground(rl.Black)
 
 	rl.DrawTextEx(m.FontHorror, "HangMan", rl.NewVector2(840, 650), 60, 20, m.color_title)
-	rl.DrawTextEx(m.FontHorror, "Made By Lucas and Sam", rl.NewVector2(605, 800), 60, 20, m.color_title)
+	rl.DrawTextEx(m.FontHorror, "Made By Lucas Sam and Leo", rl.NewVector2(535, 800), 60, 20, m.color_title)
 	
 	if m.timer_intro > 200 && m.color_title.A < 255 {
 		m.color_title.A += 5
@@ -32,3 +32,5 @@ func (m *Menu) DisplayIntro() {
 	rl.EndDrawing()
 
 }
+
+
